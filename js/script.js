@@ -1,5 +1,5 @@
 let sezione2El = document.getElementById ('sezione-1')
-sezione2El.classList.add ('d-flex' , 'flex-column' , 'align-items-center')
+sezione2El.classList.add ('d-flex' , 'flex-column' , 'align-items-center' , 'py-5')
 
 let emails =['asd@asd.it' , 'lol@lol.it' , 'gol@gol.it']
 
@@ -9,6 +9,8 @@ let consentito = false
 let emailpresente;
 
 let buttonEl = document.getElementById('bottone-controllo')
+
+buttonEl.classList.add ( 'btn' , 'btn-primary' , 'mt-3')
 
 buttonEl.addEventListener('click' , function() {
 

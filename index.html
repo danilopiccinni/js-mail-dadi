@@ -29,42 +29,46 @@
 
 
 
-    <section class="d-flex ">
-        <div>
+    <section class="d-flex flex-column align-items-center ">
+
             <div>
-                <button id="bottone-lancio">lancio dei dati</button>
+                <button class="btn btn-primary" id="bottone-lancio">lancio dei dati</button>
             </div>
-            <div>
-                <label>numero utente</label>
+            <div class="d-flex pt-5">
+                <label class="pe-2">numero utente:</label>
                 <input id="numero-utente" type="text">
+
+                <div id="cont-dadi-utente" class="ps-5">
+                    <i id="uno" class="fa-solid fa-dice-one d-none"></i>
+                    <i id="due" class="fa-solid fa-dice-two d-none"></i>
+                    <i id="tre" class="fa-solid fa-dice-three d-none"></i>
+                    <i id="quattro" class="fa-solid fa-dice-four d-none"></i>
+                    <i id="cinque" class="fa-solid fa-dice-five d-none"></i>
+                    <i id="sei" class="fa-solid fa-dice-six d-none"></i>
+                </div>
+
             </div>
-            <div>
-                <label>numero bot</label>
+            <div class="d-flex pt-2">
+                <label class="pe-2">numero bot:</label>
                 <input id="numero-bot" type="text">
+
+                <div id="cont-dadi-bot" class="ps-5">
+                    <i id="uno-bot" class="fa-solid fa-dice-one d-none"></i>
+                    <i id="due-bot" class="fa-solid fa-dice-two d-none"></i>
+                    <i id="tre-bot" class="fa-solid fa-dice-three d-none"></i>
+                    <i id="quattro-bot" class="fa-solid fa-dice-four d-none"></i>
+                    <i id="cinque-bot" class="fa-solid fa-dice-five d-none"></i>
+                    <i id="sei-bot" class="fa-solid fa-dice-six d-none"></i>
+                </div>
             </div>
-            <div>
-                <label for="">il vincitore é:</label>
+            <div class="pt-2">
+                <label class="pe-2" for="">il vincitore é:</label>
                 <input id="vincitore" type="text">
             </div>
-        </div>
 
-        <div id="cont-dadi-utente">
-            <i id="uno" class="fa-solid fa-dice-one d-none"></i>
-            <i id="due" class="fa-solid fa-dice-two d-none"></i>
-            <i id="tre" class="fa-solid fa-dice-three d-none"></i>
-            <i id="quattro" class="fa-solid fa-dice-four d-none"></i>
-            <i id="cinque" class="fa-solid fa-dice-five d-none"></i>
-            <i id="sei" class="fa-solid fa-dice-six d-none"></i>
-        </div>
 
-        <div id="cont-dadi-bot">
-            <i id="uno-bot" class="fa-solid fa-dice-one d-none"></i>
-            <i id="due-bot" class="fa-solid fa-dice-two d-none"></i>
-            <i id="tre-bot" class="fa-solid fa-dice-three d-none"></i>
-            <i id="quattro-bot" class="fa-solid fa-dice-four d-none"></i>
-            <i id="cinque-bot" class="fa-solid fa-dice-five d-none"></i>
-            <i id="sei-bot" class="fa-solid fa-dice-six d-none"></i>
-        </div>
+
+
 
     </section>
 
