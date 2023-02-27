@@ -1,4 +1,5 @@
-
+let sezione2El = document.getElementById ('sezione-1')
+sezione2El.classList.add ('d-flex' , 'flex-column' , 'align-items-center')
 
 let emails =['asd@asd.it' , 'lol@lol.it' , 'gol@gol.it']
 
@@ -29,6 +30,7 @@ buttonEl.addEventListener('click' , function() {
     else {
         alert('accesso consentito... ' + 'Benvenuto ' + emails[emailpresente])
         consentito =false
+
     }
 })
 
@@ -54,12 +56,22 @@ let seiEl = document.getElementById ('sei')
 let dadi = [unoEl , dueEl , treEl , quattroEl , cinqueEl , seiEl]
 console.log (dadi)
 
+let unoBotEl = document.getElementById ('uno-bot')
+let dueBotEl = document.getElementById ('due-bot')
+let treBotEl = document.getElementById ('tre-bot')
+let quattroBotEl = document.getElementById ('quattro-bot')
+let cinqueBotEl = document.getElementById ('cinque-bot')
+let seiBotEl = document.getElementById ('sei-bot')
+
+let dadiBot = [unoBotEl , dueBotEl , treBotEl , quattroBotEl , cinqueBotEl , seiBotEl]
+
 let buttonLanciEl = document.getElementById('bottone-lancio')
 
 buttonLanciEl.addEventListener('click' , function() {
 
     for (i = 0 ; i < 6 ; i++) {
         dadi [i].classList.add ('d-none')
+        dadiBot [i].classList.add ('d-none')
     }
     
     numeroUtente= Math.floor(Math.random() * 6 + 1)
@@ -69,7 +81,7 @@ buttonLanciEl.addEventListener('click' , function() {
     dadi[numeroUtente - 1].classList.remove ('d-none')
 
     numeroBot = Math.floor(Math.random() * 6 + 1 )
-    dadi[numeroBot - 1].classList.remove ('d-none')
+    dadiBot[numeroBot - 1].classList.remove ('d-none')
 
     numeroBotEl.value = numeroBot
 
@@ -82,7 +94,7 @@ buttonLanciEl.addEventListener('click' , function() {
         vincitoreEl.value = "vittoria del computer con il " + numeroBot
     }
     else { 
-        vincitoreEl.value = 'pareggio'
+        vincitoreEl.value = 'pareggio'        
     }
 
 })
