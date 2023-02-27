@@ -1,3 +1,5 @@
+
+
 let emails =['asd@asd.it' , 'lol@lol.it' , 'gol@gol.it']
 
 console.log (emails)
@@ -40,17 +42,36 @@ let numeroBotEl = document.getElementById ('numero-bot')
 let vincitoreEl = document.getElementById ('vincitore') 
 vincitoreEl.style.width='250px'
 
+
+
+let unoEl = document.getElementById ('uno')
+let dueEl = document.getElementById ('due')
+let treEl = document.getElementById ('tre')
+let quattroEl = document.getElementById ('quattro')
+let cinqueEl = document.getElementById ('cinque')
+let seiEl = document.getElementById ('sei')
+
+let dadi = [unoEl , dueEl , treEl , quattroEl , cinqueEl , seiEl]
+console.log (dadi)
+
 let buttonLanciEl = document.getElementById('bottone-lancio')
 
 buttonLanciEl.addEventListener('click' , function() {
 
+    for (i = 0 ; i < 6 ; i++) {
+        dadi [i].classList.add ('d-none')
+    }
+    
     numeroUtente= Math.floor(Math.random() * 6 + 1)
 
     numeroUtenteEl.value = numeroUtente
 
-    numeroBot = Math.floor(Math.random() * 6 + 1 )
+    dadi[numeroUtente - 1].classList.remove ('d-none')
 
-    numeroBotEl.value =numeroBot
+    numeroBot = Math.floor(Math.random() * 6 + 1 )
+    dadi[numeroBot - 1].classList.remove ('d-none')
+
+    numeroBotEl.value = numeroBot
 
     console.log (numeroUtente)
     console.log (numeroBot)
